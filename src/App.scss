@@ -1,0 +1,101 @@
+
+// GENERAL STYLING
+$black: #313131;
+$gray: #777777;
+$purple: #bfb1d5;
+$green: #adddcf;
+$blue: #abe1fd;
+$salmon: #fed1be;
+$yellow: #f0e0a2;
+$light-gray: #e8e7e5; 
+
+.fade-enter {
+    opacity: 0.01;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+
+
+.transition-group {
+    position: relative;
+}
+.route-section {
+ position: absolute;
+ width: 100%;
+ top: 0;
+ left: 0;
+}
+
+
+// MAJOR STRUCTURE
+
+.App {
+    display: flex;
+    height: 100vh;
+    width: 160vw;
+    position: relative;
+    top: 0;
+    left: -60vw;
+    transition: left 0.5s cubic-bezier(0.4, 0, 0.43, 1.24) 0s;
+
+    &.MenuOpen {
+        left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+        width: 190vw;
+        left: -90vw;
+    }
+
+    .Sidebar {
+        width: 60vw;
+
+        @media screen and (max-width: 768px) {
+            width: 90vw;
+        }
+    }
+
+    .Content {
+        overflow: scroll;
+        width: calc(100vw - 100px);
+        background-color: $light-gray;
+        margin: 50px;
+
+        @media screen and (max-width: 768px) {
+            margin: 0;
+            width: 100vw;
+        }
+    }
+
+    .MenuToggle {
+        position: fixed;
+        top: 75px;
+        left: 33px;
+        width: 50px;
+        height: 50px;
+
+        .line {
+            height: 5px;
+            width: 35px;
+            display: block;
+            background-color: #000;
+            margin-bottom: 5px;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-fill-mode: forwards;
+            transform-origin: center;
+        }
+    }
+}   

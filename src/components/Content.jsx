@@ -10,19 +10,19 @@ import Blog from './pages/Blog';
 import PageNotFound from './pages/PageNotFound';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
-const Content = ({ location }) => {
+const Content = ({ location, passedClass }) => {
     return (
-        <div className="Content">
-            <TransitionGroup className="transition-group">
-                <CSSTransition key={ location.key } classNames="fade" timeout={{enter: 300, exit: 300}}>
-                    <section className="route-section">
-                        <Switch location={location}>
-                            <Route exact path={routes.HOME} component={Home} />
-                            <Route exact path={routes.ABOUT} component={About} />
-                            <Route exact path={routes.PROJECTS} component={Projects} />
-                            <Route exact path={routes.EXPERIENCE} component={Experience} />
-                            <Route exact path={routes.BLOG} component={Blog} />
-                            <Route component={PageNotFound} />
+        <div className={`Content ${passedClass}`}>
+            <TransitionGroup className="transition-group stretch">
+                <CSSTransition key={ location.key } classNames="fade" className="stretch" timeout={{enter: 300, exit: 300}}>
+                    <section className="route-section stretch">
+                        <Switch location={location} className="stretch">
+                            <Route className="stretch" exact path={routes.HOME} component={Home} />
+                            <Route className="stretch" exact path={routes.ABOUT} component={About} />
+                            <Route className="stretch" exact path={routes.PROJECTS} component={Projects} />
+                            <Route className="stretch" exact path={routes.EXPERIENCE} component={Experience} />
+                            <Route className="stretch" exact path={routes.BLOG} component={Blog} />
+                            <Route className="stretch" component={PageNotFound} />
                         </Switch>
                     </section>    
                 </CSSTransition>

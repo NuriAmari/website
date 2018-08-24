@@ -12,26 +12,41 @@ const Navigation = (props) => {
     const { toggleMenu } = props;
 
     return (
-        <div>
-            <ul>
+        <React.Fragment>
+            <ul className="Navigation">
                 <li>
-                    <Link to={routes.HOME} onClick={toggleMenu}>Home</Link>
+                    <Link style={navStyle} to={routes.HOME} onClick={toggleMenu}>Home</Link>
                 </li>
                 <li>
-                    <Link to={routes.ABOUT} onClick={toggleMenu}>About</Link>
+                    <Link style={navStyle} to={routes.ABOUT} onClick={toggleMenu}>About</Link>
                 </li>
                 <li>
-                    <Link to={routes.PROJECTS} onClick={toggleMenu}>Projects</Link>
+                    <Link style={navStyle} to={routes.PROJECTS} onClick={toggleMenu}>Projects</Link>
                 </li>
                 <li>
-                    <Link to={routes.EXPERIENCE} onClick={toggleMenu}>Experience</Link>
+                    <Link style={navStyle} to={routes.EXPERIENCE} onClick={toggleMenu}>Experience</Link>
                 </li>
                 <li>
-                    <Link to={routes.BLOG} onClick={toggleMenu}>Blog</Link>
+                    <Link style={navStyle} to={routes.BLOG} onClick={toggleMenu}>Blog</Link>
                 </li>
             </ul>
-        </div>
+            <div className="sidebar-connect">
+                <ul>
+                    <li>Nuri Amari</li>
+                    <li>2A CS @ UWaterloo</li>
+                    <li><a href="tel:6133051225">613 305 1225</a></li>
+                    <li><a href="mailto:nfamari@edu.uwaterloo.ca">nfamari@edu.uwaterloo.ca</a></li>
+                </ul>
+            </div>
+        </React.Fragment>
     );
+}
+
+const navStyle = {
+    color: '#313131',
+    fontFamily: 'sans-serif',
+    fontWeight: 'Bold',
+    fontSize: '6vh',
 }
 
 export default Sidebar;

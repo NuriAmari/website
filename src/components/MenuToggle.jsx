@@ -1,7 +1,7 @@
 import React from 'react';
 
 const MenuToggle = (props) =>
-    <div onClick={props.onClick} className="MenuToggle">
+    <div onClick={props.onClick} className={"MenuToggle " + props.passedClass}>
         <div id="hamburger-wrapper">
             <span id="bar1" className="line"></span>
             <span id="bar2" className="line"></span>

@@ -65,7 +65,8 @@ class Terminal extends Component {
                 history.push(routes.BLOG);
                 newContent.push("");
             } else {
-                newContent.push("No such file or directory")
+                newContent.push("output No such file or directory");
+                newContent.push("");
             }
         } else if (keywords[0] === "ls") {
             newContent.push("output Home About Projects Experience Blog");
@@ -139,7 +140,7 @@ class Terminal extends Component {
     render() {
         return (
             <div tabIndex="0" onKeyDown={this.keyModifierHandler} onKeyPress={this.keyHandler} className={"Terminal " + this.props.passedClass}>
-                Hi there! Welcome to Nuri's CLI. <br></br>
+                Hi there! Welcome to Nuri's CLI. Use it if you want. Or don't.
                     Type help to get started. <br></br>
                     <br></br>
                 {this.state.content.map((line, index) => {

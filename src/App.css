@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Karla");
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +9,9 @@
 }
 * ul {
   list-style: none;
+}
+* .Content p {
+  font-family: "Karla", "Arial", sans-serif;
 }
 
 .stretch {
@@ -93,6 +97,19 @@
 .App .Content.CLIClosed {
   width: calc(100vw - 130px);
 }
+.App .Content .card p, .App .Content .card ul {
+  padding-left: 15px;
+  border-left: 3px solid #fdad8c;
+  font-family: "Karla", "Arial", sans-serif;
+  margin-bottom: 15px;
+}
+.App .Content .card ul {
+  border-color: #e9d176;
+  font-weight: bold;
+}
+.App .Content h2 {
+  margin-bottom: 30px;
+}
 .App .Content .Home {
   display: flex;
   flex-direction: row;
@@ -116,6 +133,7 @@
     width: 100vw;
     height: 100vh;
     padding: 140px 0 0 0;
+    justify-content: center;
   }
   .App .Content .Home h2 {
     padding-left: 5vw;
@@ -132,42 +150,53 @@
   padding-left: 50px;
   justify-content: center;
   background-color: #058fd7;
-  height: 100px;
+  min-height: 100px;
   color: white;
   margin-bottom: 50px;
 }
 .App .Content .header h1 {
   font-size: 3em;
 }
+@media screen and (max-width: 768px) {
+  .App .Content .header {
+    padding-top: 130px;
+    padding-left: 40px;
+    padding-bottom: 30px;
+  }
+}
 .App .Content .About {
-  padding-left: 50px;
+  padding-bottom: 40px;
 }
-.App .Content .About p {
-  width: 70%;
-  max-width: 500px;
-  margin: 0 0 35px 0px;
-  padding-left: 15px;
-  border-left: 3px solid #034d73;
+.App .Content .Experience {
+  padding-bottom: 30px;
 }
-.App .Content .About .header {
-  margin-left: -50px;
+.App .Content .Experience p {
+  font-weight: bold;
 }
-.App .Content .About h2 {
-  margin-bottom: 30px;
+.App .Content .Experience ul li {
+  margin-bottom: 10px;
+  font-weight: normal;
 }
-.App .Content .About .skills > div {
+.App .Content .card {
   padding: 30px;
   background-color: white;
   min-height: 200px;
   margin-bottom: 20px;
-  width: calc(100% - 50px);
+  margin-left: 50px;
+  width: calc(100% - 100px);
   box-shadow: 0px 10px 20px 1px rgba(148, 148, 148, 0.5);
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+}
+.App .Content .blurb {
+  margin-left: 50px;
+}
+.App .Content p.blurb {
+  width: calc(100% - 100px);
+  max-width: 800px;
+  margin-bottom: 35px;
 }
 .App .MenuToggle {
   position: fixed;
-  top: 75px;
+  top: 88px;
   left: 33px;
   width: 50px;
   height: 50px;
@@ -224,6 +253,7 @@
     padding-top: -25px;
     padding-left: -25px;
     top: 40px;
+    left: 40px;
     width: 60px;
     height: 60px;
     padding-top: 17px;

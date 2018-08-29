@@ -8,7 +8,7 @@ const About = () =>
         <p className="blurb">
             Hello, my name is Nuri. I'm a <span>Computer Science</span> student in my second year at the 
             University of Waterloo. I like making web apps that work but also hopefully look half decent.
-            I'm looking for an internship summer 2019, so if you're hiring ... :).
+            I'm looking for an internship summer 2019, so if you're hiring ...
         </p>
         <h2 className="blurb">Skills</h2>
         <div className="skills">

@@ -74,13 +74,39 @@
   flex-direction: column;
   justify-content: space-between;
 }
+.App .Sidebar .Navigation li:nth-child(1) a {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #fed1be 50%);
+}
+.App .Sidebar .Navigation li:nth-child(2) a {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #f0e0a2 50%);
+}
+.App .Sidebar .Navigation li:nth-child(3) a {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #adddcf 50%);
+}
+.App .Sidebar .Navigation li:nth-child(4) a {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #abe1fd 50%);
+}
+.App .Sidebar .Navigation li:nth-child(5) a {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 50%, #bfb1d5 50%);
+}
+.App .Sidebar .Navigation a {
+  padding: 0 5px;
+  background-size: 210%;
+  transition: background-position 0.5s;
+}
+.App .Sidebar .Navigation a:hover {
+  background-position: -90%;
+}
+.App .Sidebar .sidebar-connect a {
+  color: #313131;
+}
 @media screen and (max-width: 768px) {
   .App .Sidebar {
     width: 90vw;
   }
 }
 .App .Content {
-  overflow: scroll;
+  overflow-y: scroll;
   width: calc(60vw - 100px);
   background-color: #e8e7e5;
   margin: 50px;
@@ -115,7 +141,6 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  width: calc(100vw - 100px);
   height: calc(100vh - 100px);
   padding: 50px 50px 0 50px;
 }
@@ -164,8 +189,38 @@
     padding-bottom: 30px;
   }
 }
+.App .Content .Projects {
+  /*.card {
+      position: relative;
+  }
+
+  a {
+      position: absolute;
+      top: 0;
+      right: 0;
+  }*/
+  padding-bottom: 30px;
+}
+.App .Content .Projects img {
+  width: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.App .Content .Projects h2, .App .Content .Projects img {
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .App .Content .Projects {
+    padding-bottom: 1.5vw;
+  }
+}
 .App .Content .About {
   padding-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .App .Content .About {
+    padding-bottom: 1.5vw;
+  }
 }
 .App .Content .Experience {
   padding-bottom: 30px;
@@ -177,6 +232,11 @@
   margin-bottom: 10px;
   font-weight: normal;
 }
+@media screen and (max-width: 768px) {
+  .App .Content .Experience {
+    padding-bottom: 1.5vw;
+  }
+}
 .App .Content .card {
   padding: 30px;
   background-color: white;
@@ -186,8 +246,19 @@
   width: calc(100% - 100px);
   box-shadow: 0px 10px 20px 1px rgba(148, 148, 148, 0.5);
 }
+@media screen and (max-width: 768px) {
+  .App .Content .card {
+    margin-left: 5vw;
+    width: 90vw;
+  }
+}
 .App .Content .blurb {
   margin-left: 50px;
+}
+@media screen and (max-width: 768px) {
+  .App .Content .blurb {
+    margin-left: 5vw;
+  }
 }
 .App .Content p.blurb {
   width: calc(100% - 100px);
@@ -277,7 +348,7 @@
   flex-direction: column;
   justify-content: flex-start;
   white-space: pre-wrap;
-  overflow: scroll;
+  overflow-y: scroll;
   transition: right 0.5s cubic-bezier(0.4, 0, 0.43, 1.24) 0s;
 }
 .App .Terminal.CLIClosed {

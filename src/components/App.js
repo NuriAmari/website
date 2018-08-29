@@ -48,7 +48,7 @@ class App extends Component {
             <Sidebar toggleMenu={this.toggleMenu}/>
             <Content passedClass={`${cliClass}`}/>
             <MenuToggle passedClass={menuClass} onClick={this.toggleMenu}/>
-            <Terminal ref={this.terminalRef} passedClass={cliClass} toggleCli={this.toggleCli} toggleMenu={this.toggleMenu}/>
+            <Terminal wrappedComponentRef={c => this.ref = this.terminalRef} passedClass={cliClass} toggleCli={this.toggleCli} toggleMenu={this.toggleMenu}/>
             <div onClick={this.toggleCli} className={`cliTab ${cliClass}`}> {`<=`} </div>
           </div>
         </div>

@@ -91,13 +91,48 @@ $dark-blue: #013243;
         flex-direction: column;
         justify-content: space-between;
 
+        .Navigation {
+
+            li:nth-child(1) a {
+                background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, $salmon 50%);
+            }
+            li:nth-child(2) a {
+                background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, $yellow 50%);
+            }
+            li:nth-child(3) a {
+                background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, $green 50%);
+            }
+            li:nth-child(4) a {
+                background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, $blue 50%);
+            }
+            li:nth-child(5) a {
+                background-image: linear-gradient(to right, rgba(0,0,0,0) 50%, $purple 50%);
+            }
+
+            a {
+                
+                padding: 0 5px;
+                background-size: 210%;
+                transition: background-position 0.5s;
+                &:hover {
+                    background-position: -90%;
+                }
+            }
+        }
+
+        .sidebar-connect {
+            a {
+                color: $black;
+            }
+        }
+
         @media screen and (max-width: 768px) {
             width: 90vw;
         }
     }
 
     .Content {
-        overflow: scroll;
+        overflow-y: scroll;
         width: calc(60vw - 100px);
         background-color: $light-gray;
         margin: 50px;
@@ -138,7 +173,7 @@ $dark-blue: #013243;
             flex-direction: row;
             align-items: flex-start;
             justify-content: flex-start;
-            width: calc(100vw - 100px);
+            //width: calc(100vw - 100px);
             height: calc(100vh - 100px);
             padding: 50px 50px 0 50px;
             //`background: url('./img/doodles.png');
@@ -196,14 +231,40 @@ $dark-blue: #013243;
         }
 
 
+        .Projects {
+            
+            /*.card {
+                position: relative;
+            }
+
+            a {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }*/
+            img {
+                width: 30px;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            h2, img {
+                vertical-align: bottom;
+            }
+
+            padding-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                padding-bottom: 1.5vw;
+            }
+        }
+
         .About {
 
             padding-bottom: 40px;
 
-            
-
-            .skills {
-            
+            @media screen and (max-width: 768px) {
+                padding-bottom: 1.5vw;
             }
         }
 
@@ -220,6 +281,10 @@ $dark-blue: #013243;
             }
             
             padding-bottom: 30px;
+
+            @media screen and (max-width: 768px) {
+                padding-bottom: 1.5vw;
+            }
         }
 
         .card {
@@ -231,11 +296,18 @@ $dark-blue: #013243;
             width: calc(100% - 100px);
             box-shadow: 0px 10px 20px 1px rgba(148,148,148,0.5);
 
-            
+            @media screen and (max-width: 768px) {
+                margin-left: 5vw;
+                width: 90vw;
+            }
         }
 
         .blurb {
             margin-left: 50px;
+
+            @media screen and (max-width: 768px) {
+                margin-left: 5vw;
+            }
         }
 
         p.blurb {
@@ -340,7 +412,7 @@ $dark-blue: #013243;
         flex-direction: column;
         justify-content: flex-start;
         white-space: pre-wrap;
-        overflow: scroll;
+        overflow-y: scroll;
         transition: right 0.5s cubic-bezier(0.4, 0, 0.43, 1.24) 0s;
 
         &.CLIClosed {

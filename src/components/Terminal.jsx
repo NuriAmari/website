@@ -90,6 +90,7 @@ class Terminal extends Component {
             window.open("https://nuriamari.com/resume.pdf", "_blank");
         } else if (keywords[0] === "hide") {
             this.props.toggleCli();
+            //newContent.push("Hiding is disabled");
             newContent.push("");
         } else if (keywords[0] === "toggleMenu" || keywords[0] === "toggleMenu") {
             toggleMenu();
@@ -103,10 +104,9 @@ class Terminal extends Component {
             newContent.push("output linkedin   --> open linkedin");
             newContent.push("output github     --> open github");
             newContent.push("output resume     --> open resume");
-            newContent.push("output call       --> call me");
+            newContent.push("output phone      --> call me");
             newContent.push("output email      --> email me");
             newContent.push("output enter      --> execute line");
-            newContent.push("output hide       --> hide the CLI");
             newContent.push("output clear      --> clear the CLI");
             newContent.push("");
         } else {
@@ -151,7 +151,7 @@ class Terminal extends Component {
                         } else {
                             if (index === this.state.content.length - 1) {
                                 return (
-                                    <p key={index}><span className="prompt">$: </span>{line}<div className="cursor"></div></p>
+                                    <p key={index}><span className="prompt">$: </span>{line}<span className="cursor"></span></p>
                                 );
                             }
                             return (

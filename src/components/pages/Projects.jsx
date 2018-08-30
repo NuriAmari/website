@@ -67,16 +67,39 @@ const Projects = () =>
                 <h2>Flat Colours <a href="https://github.com/NuriAmari/Flat-Colours" rel="noopener noreferrer" target="_blank">
                     <img src={require("../../img/github.svg")} alt=""></img>
                 </a></h2>
+                <p>A website to help designers browse and select colours. Once a user has found a colour they're satisfied with, they can click on it and the corresponding
+                    hexcode will automatically be copied to their clipboard.
+                </p>
+                <ul>
+                    <li>clipboard.js</li>
+                    <li>jQuery</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
             </div>
             <div className="card">
                 <h2>Nodejs Snake <a href="https://github.com/NuriAmari/Snake.io" rel="noopener noreferrer" target="_blank">
                     <img src={require("../../img/github.svg")} alt=""></img>
                 </a></h2>
+                <p>An online multiplayer version of the classic snake game. Includes live leaderboard and login features.
+                </p>
+                <ul>
+                    <li>Socket.io</li>
+                    <li>NodeJS</li>
+                    <li>JavaScript</li>
+                    <li>Adobe Animate</li>
+                </ul>
             </div>
             <div className="card">
                 <h2>RPG Adventure <a href="https://github.com/NuriAmari/Little-RPG-Adventure" rel="noopener noreferrer" target="_blank">
                     <img src={require("../../img/github.svg")} alt=""></img>
                 </a></h2>
+                <p>A small RPG game including multiple worlds for players to explore, autonomous enemies to battle and stats to collect. Played by over 1500 unique players.
+                </p>
+                <ul>
+                    <li>ActionScript</li>
+                    <li>Adobe Animate</li>
+                </ul>
             </div>
         </div>
     </div>

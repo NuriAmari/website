@@ -165,4 +165,4 @@ class Terminal extends Component {
     }
 }
 
-export default withRouter(Terminal);
+export default withRouter(Terminal, {withRef: true});

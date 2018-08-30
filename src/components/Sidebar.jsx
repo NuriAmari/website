@@ -26,9 +26,6 @@ const Navigation = (props) => {
                 <li>
                     <Link style={navStyle} to={routes.EXPERIENCE} onClick={toggleMenu}>Experience</Link>
                 </li>
-                <li>
-                    <Link style={navStyle} to={routes.BLOG} onClick={toggleMenu}>Blog</Link>
-                </li>
             </ul>
             <div className="sidebar-connect">
                 <ul>

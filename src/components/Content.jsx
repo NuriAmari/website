@@ -21,7 +21,6 @@ const Content = ({ location, passedClass }) => {
                             <Route className="stretch" exact path={routes.ABOUT} component={About} />
                             <Route className="stretch" exact path={routes.PROJECTS} component={Projects} />
                             <Route className="stretch" exact path={routes.EXPERIENCE} component={Experience} />
-                            <Route className="stretch" exact path={routes.BLOG} component={Blog} />
                             <Route className="stretch" component={PageNotFound} />
                         </Switch>
                     </section>    

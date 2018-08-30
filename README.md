@@ -1,1 +1,1 @@
-Personal website created using React. Available at nuriamari.com
+Personal website created using React. Available soon.

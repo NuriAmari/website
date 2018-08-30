@@ -133,6 +133,7 @@ $dark-blue: #013243;
 
     .Content {
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         width: calc(60vw - 100px);
         background-color: $light-gray;
         margin: 50px;

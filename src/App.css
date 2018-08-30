@@ -107,6 +107,7 @@
 }
 .App .Content {
   overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   width: calc(60vw - 100px);
   background-color: #e8e7e5;

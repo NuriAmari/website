@@ -15,9 +15,9 @@ const About = () =>
             <div className="card">
                 <h2>Front-End:</h2>
                 <div>
-                    <p>Front end is the area I'm most experience in, and what I'm best at. I've
+                    <p>Front end is the area I'm most experienced in, and what I'm best at. I've
                         spent far too long loathing CSS, but I think I've finally mastered it
-                        and we're cool now. Here's some tools I used in some capacity at some time
+                        and we're cool now. Here are some tools I used in some capacity at some time
                         in my entire life.
                     </p>
                     <ul>
@@ -48,7 +48,7 @@ const About = () =>
             <div className="card">
                 <h2>Design</h2>
                 <div>
-                    <p>Honestly, I never intend to learn design, its more of a means to an end. Also I shamelessly,
+                    <p>Honestly, I never intended to learn design, it's more of a means to an end. Also I shamelessly,
                         steal designs from actual designers. But, my application being good looking really excites
                         me, and I've been told I have an eye for this kind of thing. Tools again:
                     </p>

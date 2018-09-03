@@ -53,11 +53,7 @@ const Projects = () =>
                     <img src={require("../../img/github.svg")} alt=""></img>
                 </a></h2>
                 <p>For a high school business competition, my partner and I created a proof of concept mobile banking Android application capable of reading and writing
-<<<<<<< HEAD
                     data to NFC data chips. As part of a marketing campaign, we designed and produced physical NFC enabled posters allowing customers to interact with our advertisements.
-=======
-                    data to NFC data chips. As part of a marketing campaign, we design and produced physical NFC enabled posters allowing customers to interact with our advertisements.
->>>>>>> 859b271834aed64943e6b8a1e8b85286a25d96aa
                 </p>
                 <ul>
                     <li>Java</li>

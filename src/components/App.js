@@ -40,6 +40,7 @@ class App extends Component {
 
     let menuClass = this.state.menuOpen ? "MenuOpen" : "MenuClosed";
     let cliClass = this.state.cliOpen ? "CLIOpen" : "CLIClosed";
+    //const TerminalWithRef = React.forwardRef((props, ref) => <Terminal ref={ref} props={props}/>);
 
     return (
       <Router>
@@ -48,7 +49,7 @@ class App extends Component {
             <Sidebar toggleMenu={this.toggleMenu}/>
             <Content passedClass={`${cliClass}`}/>
             <MenuToggle passedClass={menuClass} onClick={this.toggleMenu}/>
-            <Terminal wrappedComponentRef={c => this.ref = this.terminalRef} passedClass={cliClass} toggleCli={this.toggleCli} toggleMenu={this.toggleMenu}/>
+            <Terminal passedClass={cliClass} toggleCli={this.toggleCli} toggleMenu={this.toggleMenu}/>
             <div onClick={this.toggleCli} className={`cliTab ${cliClass}`}> {`<=`} </div>
           </div>
         </div>

@@ -132,7 +132,8 @@ $dark-blue: #013243;
     }
 
     .Content {
-        overflow-y: scroll;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         width: calc(60vw - 100px);
         background-color: $light-gray;
         margin: 50px;
@@ -412,7 +413,7 @@ $dark-blue: #013243;
         flex-direction: column;
         justify-content: flex-start;
         white-space: pre-wrap;
-        overflow-y: scroll;
+        overflow-y: auto;
         transition: right 0.5s cubic-bezier(0.4, 0, 0.43, 1.24) 0s;
 
         &.CLIClosed {

@@ -231,6 +231,18 @@ $dark-blue: #013243;
             }
         }
 
+        .PageNotFound {
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: calc(100vh - 100px);
+            flex-direction: column;
+
+            h1 {
+                font-size: 120px;
+            }
+        }
 
         .Projects {
             

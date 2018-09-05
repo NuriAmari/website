@@ -6,7 +6,6 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Experience from './pages/Experience';
-import Blog from './pages/Blog';
 import PageNotFound from './pages/PageNotFound';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
 
@@ -21,6 +20,7 @@ const Content = ({ location, passedClass }) => {
                             <Route className="stretch" exact path={routes.ABOUT} component={About} />
                             <Route className="stretch" exact path={routes.PROJECTS} component={Projects} />
                             <Route className="stretch" exact path={routes.EXPERIENCE} component={Experience} />
+                            <Route className="stretch" exact path={routes.RESUME} component={() => window.location = "https://nuriamari.github.io/resume.pdf"}/>
                             <Route className="stretch" component={PageNotFound} />
                         </Switch>
                     </section>    
@@ -29,5 +29,7 @@ const Content = ({ location, passedClass }) => {
         </div>
     );
 }
+
+
 
 export default withRouter(Content);

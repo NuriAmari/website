@@ -108,7 +108,6 @@
 .App .Content {
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
   width: calc(60vw - 100px);
   background-color: #e8e7e5;
   margin: 50px;
@@ -191,16 +190,26 @@
     padding-bottom: 30px;
   }
 }
+.App .Content .PageNotFound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 100px);
+  flex-direction: column;
+}
+.App .Content .PageNotFound h1 {
+  font-size: 120px;
+}
 .App .Content .Projects {
   /*.card {
-                  position: relative;
-              }
-  
-              a {
-                  position: absolute;
-                  top: 0;
-                  right: 0;
-              }*/
+      position: relative;
+  }
+
+  a {
+      position: absolute;
+      top: 0;
+      right: 0;
+  }*/
   padding-bottom: 30px;
 }
 .App .Content .Projects img {

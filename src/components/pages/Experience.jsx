@@ -6,7 +6,7 @@ const Experience = () =>
             <h1>Experience</h1>
         </div>
         <div className="card">
-            <h2>Software Developer - York Region</h2>
+            <h2>York Region - Software Developer</h2>
             <p>Worked With: NodeJS, MongoDB, Mongoose, Express, Handlebars, Salesforce, JavaScript, jQuery, MySQL, CSS, HTML, Microsoft PowerApps, Microsoft Flow, Microsoft SharePoint, Jira</p>
             <ul>
                 <li>Independently developed and deployed two full stack communication tools from start to finish</li>
@@ -20,6 +20,19 @@ const Experience = () =>
                 <li>Assisted in the revamping of existing Salesforce based applications</li>
             </ul>
         </div>
+        <div className="card">
+            <h2>Waterloop - Web Team Member</h2>
+            <p>Worked with: NodeJS, React, Vue.js, SQL</p>
+            <ul>
+                <li>Interfaced with multiple APIs to pull team's recent social media data</li>
+                <li>Contributed to front-end implementation of \textbf{Vue.js} based team site</li>
+                <li>Worked in a team to develop a React, Node and SQL based team management application</li>
+            </ul>
+       </div>
+       <div className="card">
+            <h2>WATonomous - UI Dashboard Team Member</h2>
+            <li>Updated and maintained a C++ and Qt Component based interface to display error logs in the autonomous car</li>
+       </div>
     </div>
 
 export default Experience;

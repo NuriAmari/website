@@ -11,6 +11,24 @@ const Projects = () =>
         </p>
         <div className="projects-list">
             <div className="card">
+            <h2>Spotify GroupMusic <a href="https://github.com/NuriAmari/react-personal-website" rel="noopener noreferrer" target="_blank">
+                    <img src={require("../../img/github.svg")} alt=""></img>
+            </a>
+            </h2>
+            <p>A small application made for HackTheNorth 2018. My partner and I wanted to make an application that would help
+                friends curate their music. The application lets users log in with their Spotify account and create shared playlists.
+                They can then contribute music to this playlist, and our application will filter contributions to include only common songs.
+                Once everyone has added their music, GroupMusic automatically creates a matching playlist in the user's Spotify library.
+            </p>
+            <ul>
+                <li>React</li>
+                <li>Redux</li>
+                <li>NodeJS</li>
+                <li>Axios</li>
+                <li>Spotify API</li>
+            </ul>
+            </div>
+            <div className="card">
                 <h2>Personal Website <a href="https://github.com/NuriAmari/react-personal-website" rel="noopener noreferrer" target="_blank">
                     <img src={require("../../img/github.svg")} alt=""></img>
                 </a></h2>

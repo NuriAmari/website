@@ -24,14 +24,20 @@ const Experience = () =>
             <h2>Waterloop - Web Team Member</h2>
             <p>Worked with: NodeJS, React, Vue.js, SQL</p>
             <ul>
+                <li>Waterloop is a student run design team that competes in SpaceX's hyperloop competition</li>
                 <li>Interfaced with multiple APIs to pull team's recent social media data</li>
-                <li>Contributed to front-end implementation of \textbf{Vue.js} based team site</li>
+                <li>Contributed to front-end implementation of Vue.js based team site</li>
                 <li>Worked in a team to develop a React, Node and SQL based team management application</li>
             </ul>
        </div>
        <div className="card">
             <h2>WATonomous - UI Dashboard Team Member</h2>
-            <li>Updated and maintained a C++ and Qt Component based interface to display error logs in the autonomous car</li>
+            <p>Worked with: C++, Python, ROS, Qt Components, Qt Creator, Linux</p>
+            <ul>
+                <li>WATonomous is a student run team working towards creating an autonomous car.</li>
+                <li>Updated and maintained a C++ and Qt Component based interface to display error logs in the autonomous car</li>
+            </ul>
+
        </div>
     </div>
 

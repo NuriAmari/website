@@ -11,7 +11,7 @@ const Projects = () =>
         </p>
         <div className="projects-list">
             <div className="card">
-            <h2>Spotify GroupMusic <a href="https://github.com/NuriAmari/react-personal-website" rel="noopener noreferrer" target="_blank">
+            <h2>Spotify GroupMusic <a href="https://github.com/NuriAmari/spotify-playlist" rel="noopener noreferrer" target="_blank">
                     <img src={require("../../img/github.svg")} alt=""></img>
             </a>
             </h2>

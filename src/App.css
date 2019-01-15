@@ -361,6 +361,10 @@
   white-space: pre-wrap;
   overflow-y: auto;
   transition: right 0.5s cubic-bezier(0.4, 0, 0.43, 1.24) 0s;
+  transition: outline 0.1s ease-in 0s;
+}
+.App .Terminal:focus {
+  outline: 4px solid #bfb1d5;
 }
 .App .Terminal.CLIClosed {
   right: -40vw;

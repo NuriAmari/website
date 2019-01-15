@@ -13,23 +13,57 @@ const Content = ({ location, passedClass }) => {
     return (
         <div className={`Content ${passedClass}`}>
             <TransitionGroup className="transition-group stretch">
-                <CSSTransition key={ location.key } classNames="fade" className="stretch" timeout={{enter: 300, exit: 300}}>
+                <CSSTransition
+                    key={location.key}
+                    classNames="fade"
+                    className="stretch"
+                    timeout={{ enter: 300, exit: 300 }}
+                >
                     <section className="route-section stretch">
                         <Switch location={location} className="stretch">
-                            <Route className="stretch" exact path={routes.HOME} component={Home} />
-                            <Route className="stretch" exact path={routes.ABOUT} component={About} />
-                            <Route className="stretch" exact path={routes.PROJECTS} component={Projects} />
-                            <Route className="stretch" exact path={routes.EXPERIENCE} component={Experience} />
-                            <Route className="stretch" exact path={routes.RESUME} component={() => window.location = "https://nuriamari.github.io/resume.pdf"}/>
-                            <Route className="stretch" component={PageNotFound} />
+                            <Route
+                                className="stretch"
+                                exact
+                                path={routes.HOME}
+                                component={Home}
+                            />
+                            <Route
+                                className="stretch"
+                                exact
+                                path={routes.ABOUT}
+                                component={About}
+                            />
+                            <Route
+                                className="stretch"
+                                exact
+                                path={routes.PROJECTS}
+                                component={Projects}
+                            />
+                            <Route
+                                className="stretch"
+                                exact
+                                path={routes.EXPERIENCE}
+                                component={Experience}
+                            />
+                            <Route
+                                className="stretch"
+                                exact
+                                path={routes.RESUME}
+                                component={() =>
+                                    (window.location =
+                                        'https://nuriamari.github.io/resume.pdf')
+                                }
+                            />
+                            <Route
+                                className="stretch"
+                                component={PageNotFound}
+                            />
                         </Switch>
-                    </section>    
+                    </section>
                 </CSSTransition>
             </TransitionGroup>
         </div>
     );
-}
-
-
+};
 
 export default withRouter(Content);

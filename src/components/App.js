@@ -7,56 +7,63 @@ import '../App.css';
 import Terminal from './Terminal';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      menuOpen: false,
-      cliOpen: true,
-    };
-    this.terminalRef = React.createRef();
-    this.toggleMenu = this.toggleMenu.bind(this);
-    this.toggleCli = this.toggleCli.bind(this);
-  }
-  
-  toggleMenu() {
-    this.setState(previousState => ({
-      menuOpen: !previousState.menuOpen,
-    }));
-  }
-
-  toggleCli() {
-    this.setState(previousState => ({
-      cliOpen: !previousState.cliOpen,
-    }));
-    if (this.state.cliOpen) {
-      console.log(this.terminalRef);
-      //this.terminalRef.current.focus();
-    } else {
-      window.focus();
+    constructor(props) {
+        super(props);
+        this.state = {
+            menuOpen: false,
+            cliOpen: true,
+        };
+        this.terminalRef = React.createRef();
+        this.toggleMenu = this.toggleMenu.bind(this);
+        this.toggleCli = this.toggleCli.bind(this);
     }
-  }
 
-  render() {
+    toggleMenu() {
+        this.setState(previousState => ({
+            menuOpen: !previousState.menuOpen,
+        }));
+    }
 
-    let menuClass = this.state.menuOpen ? "MenuOpen" : "MenuClosed";
-    let cliClass = this.state.cliOpen ? "CLIOpen" : "CLIClosed";
-    //const TerminalWithRef = React.forwardRef((props, ref) => <Terminal ref={ref} props={props}/>);
+    toggleCli() {
+        this.setState(previousState => ({
+            cliOpen: !previousState.cliOpen,
+        }));
+        if (this.state.cliOpen) {
+            console.log(this.terminalRef);
+            //this.terminalRef.current.focus();
+        } else {
+            window.focus();
+        }
+    }
 
-    return (
-      <Router>
-        <div onKeyPress={this.test} style={{overflow: 'hidden'}}>
-          <div className={`App ${menuClass}`}>
-            <Sidebar toggleMenu={this.toggleMenu}/>
-            <Content passedClass={`${cliClass}`}/>
-            <MenuToggle passedClass={menuClass} onClick={this.toggleMenu}/>
-            <Terminal passedClass={cliClass} toggleCli={this.toggleCli} toggleMenu={this.toggleMenu}/>
-            <div onClick={this.toggleCli} className={`cliTab ${cliClass}`}> {`<=`} </div>
-          </div>
-        </div>
+    render() {
+        let menuClass = this.state.menuOpen ? 'MenuOpen' : 'MenuClosed';
+        let cliClass = this.state.cliOpen ? 'CLIOpen' : 'CLIClosed';
 
-      </Router>
-    );
-  }
+        return (
+            <Router>
+                <div onKeyPress={this.test} style={{ overflow: 'hidden' }}>
+                    <div className={`App ${menuClass}`}>
+                        <Sidebar toggleMenu={this.toggleMenu} />
+                        <Content passedClass={`${cliClass}`} />
+                        <MenuToggle
+                            passedClass={menuClass}
+                            onClick={this.toggleMenu}
+                        />
+                        <Terminal
+                            passedClass={cliClass}
+                            toggleCli={this.toggleCli}
+                            toggleMenu={this.toggleMenu}
+                        />
+                        <div
+                            onClick={this.toggleCli}
+                            className={`cliTab ${cliClass}`}
+                        />
+                    </div>
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;

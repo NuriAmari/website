@@ -18,10 +18,61 @@
                 "Configured site to pull content from single JSON file to facilitate efficient content management",
                 "Implemented using React, SASS, Adobe Illustrator and Sketch"
             ],
-            "tools": ["React", "SASS"],
+            "tools": ["React", "SASS", "Adobe Illustrator", "JSON", "Sketch"],
+            "github-link": "",
+            "date": ""
+        },
+        {
+            "title": "C++ Multiplayer Tetris",
+            "description": [
+                "Worked in a group of 3 to create a game allowing two players to play tetris against one another using text commands",
+                "Developed text-command autocompletion with a trie, and flexible block rotation using linear algebra",
+                "Implemented object behaviour modification at runtime using a doubly-linked list based implementation of the decorator pattern"
+            ],
+            "tools": ["C++", "X-Window Graphics"],
+            "github-link": "",
+            "date": ""
+        }, 
+        {
+            "title": "Spotify Music Curation",
+            "description": [
+                "Aims to helps groups quickly find music enjoyed by all members",
+                "Creates new Spotify playlists based on music contributed by members"
+            ],
+            "tools": ["Node", "React", "Redux", "MongoDB"],
             "github-link": "",
             "date": ""
         }
     ],
-    "experiences": []
+    "experiences": [
+        {
+            "title": "York Region - Software Developer",
+            "description": [
+                "Developed an internal communication tool with Node, Express and the Handlebars templating engine",
+                "Features include Google + Azure Active Directory based authentication and live-chat based discussion forums built with Socket.io",
+                "Gave live recorded talks to company employees on the capabilities of Node as a primary development stack"
+            ],
+            "github-link": "",
+            "date": "April - August 2018"
+        },
+        {
+            "title": "Waterloop - Web Team Member",
+            "description": [
+                "Created single sign on application to manage member's access to common resources (slack, github, drive etc)",
+                "Developed user authentication and management tools to protect data and streamline regular personnel changes",
+                "Used Twitter API to display relevant media on Vue based team site"
+            ],
+            "github-link": "",
+            "date": "Sept 2018 - Present"
+        },
+        {
+            "title": "WATonomous - UI Dashboard Team Member",
+            "description": [
+                "Implemented a logging interface for an autonomous car using C++ and Qt Components",
+                "Radically reduced debugging time by displaying information from numerous car systems in real time"   
+            ],
+            "github-link": "",
+            "date": "Sept 2018 - Present"
+        }
+    ]
 }

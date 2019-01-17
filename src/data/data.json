@@ -53,16 +53,18 @@
                 "Gave live recorded talks to company employees on the capabilities of Node as a primary development stack"
             ],
             "github-link": "",
+            "tools": ["NodeJS", "Express", "Salesforce"],
             "date": "April - August 2018"
         },
         {
             "title": "Waterloop - Web Team Member",
             "description": [
-                "Created single sign on application to manage member's access to common resources (slack, github, drive etc)",
+                "Created a single sign on application to manage member's access to common resources (slack, github, drive etc)",
                 "Developed user authentication and management tools to protect data and streamline regular personnel changes",
                 "Used Twitter API to display relevant media on Vue based team site"
             ],
             "github-link": "",
+            "tools": [],
             "date": "Sept 2018 - Present"
         },
         {
@@ -72,6 +74,7 @@
                 "Radically reduced debugging time by displaying information from numerous car systems in real time"   
             ],
             "github-link": "",
+            "tools": [],
             "date": "Sept 2018 - Present"
         }
     ]

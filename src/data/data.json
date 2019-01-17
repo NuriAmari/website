@@ -1,0 +1,27 @@
+{
+    "projects": [
+        {
+            "title": "JavaScript Chess AI",
+            "description": [
+                "Determines next move by evaluating possible scenarios a variable number of moves into the future",
+                "Uses a minimax tree with alpha-beta pruning and a hash-map based board state representation"
+            ],
+            "tools": ["JavaScript", "Chess.js (move validation", "Chessboard.js (graphics)"],
+            "github-link": "",
+            "date": ""
+        },
+        {
+            "title": "Personal Website",
+            "description": [
+                "Created a terminal emulator allowing the user to navigate the entire site through text commands (pls try it if you havent)",
+                "Produced interactive SVG graphics, CSS animations and a responsive design",
+                "Configured site to pull content from single JSON file to facilitate efficient content management",
+                "Implemented using React, SASS, Adobe Illustrator and Sketch"
+            ],
+            "tools": ["React", "SASS"],
+            "github-link": "",
+            "date": ""
+        }
+    ],
+    "experiences": []
+}

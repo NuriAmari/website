@@ -26,6 +26,20 @@ const Wrapper = styled.div`
             margin-bottom: 0px !important;
         }
     }
+    .tools {
+        margin-top: 20px;
+
+        li {
+            display: inline-block;
+            font-family: sans-serif;
+            font-weight: bold !important;
+            background-color: #058fd7;
+            padding: 3px 5px;
+            border-radius: 4px;
+            margin: 4px 4px 0 4px !important;
+            color: white;
+        }
+    }
 `;
 
 const Card = ({ title, description, date, tools, githubLink }) => (

@@ -50,10 +50,11 @@
             "description": [
                 "Developed an internal communication tool with Node, Express and the Handlebars templating engine",
                 "Features include Google + Azure Active Directory based authentication and live-chat based discussion forums built with Socket.io",
-                "Gave live recorded talks to company employees on the capabilities of Node as a primary development stack"
+                "Pioneered a project to investigate Node as an alternative to the current overly primative development stack",
+                "Gave live recorded talks to company employees on the capabilities of Node and improved existing software demonstrating said capabilties"
             ],
             "github-link": "",
-            "tools": ["NodeJS", "Express", "Salesforce"],
+            "tools": ["NodeJS", "Express", "Salesforce", "MongoDB", "Socket.io", "Handlebars"],
             "date": "April - August 2018"
         },
         {
@@ -64,7 +65,7 @@
                 "Used Twitter API to display relevant media on Vue based team site"
             ],
             "github-link": "",
-            "tools": [],
+            "tools": ["React", "NodeJS", "Express", "Bootstrap", "Styled-Components", "Webpack"],
             "date": "Sept 2018 - Present"
         },
         {
@@ -74,7 +75,7 @@
                 "Radically reduced debugging time by displaying information from numerous car systems in real time"   
             ],
             "github-link": "",
-            "tools": [],
+            "tools": ["C++", "Qt Components"],
             "date": "Sept 2018 - Present"
         }
     ]

@@ -54,6 +54,7 @@
                 "Gave live recorded talks to company employees on the capabilities of Node and improved existing software demonstrating said capabilties"
             ],
             "github-link": "",
+            "image": "yorkregion.png",
             "tools": ["NodeJS", "Express", "Salesforce", "MongoDB", "Socket.io", "Handlebars"],
             "date": "April - August 2018"
         },
@@ -65,6 +66,7 @@
                 "Used Twitter API to display relevant media on Vue based team site"
             ],
             "github-link": "",
+            "image": "waterloop.svg",
             "tools": ["React", "NodeJS", "Express", "Bootstrap", "Styled-Components", "Webpack"],
             "date": "Sept 2018 - Present"
         },
@@ -75,6 +77,7 @@
                 "Radically reduced debugging time by displaying information from numerous car systems in real time"   
             ],
             "github-link": "",
+            "image": "watonomous.png",
             "tools": ["C++", "Qt Components"],
             "date": "Sept 2018 - Present"
         }

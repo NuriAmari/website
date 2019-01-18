@@ -15,6 +15,10 @@ const Wrapper = styled.div`
         width: 90vw;
     }
 
+    img {
+        width: 100%;
+    }
+
     p,
     .description {
         padding: 3px 0px 3px 15px;
@@ -42,8 +46,9 @@ const Wrapper = styled.div`
     }
 `;
 
-const Card = ({ title, description, date, tools, githubLink }) => (
+const Card = ({ title, image, description, date, tools, githubLink }) => (
     <Wrapper>
+        {image && <img src={require(`../../img/${image}`)} />}
         <h2>{title}</h2>
         <ul className="description">
             {description.map((point, index) => (

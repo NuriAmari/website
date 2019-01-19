@@ -46,7 +46,8 @@
     ],
     "experiences": [
         {
-            "title": "York Region - Software Developer",
+            "title": "Software Developer",
+            "employer": "York Region",
             "description": [
                 "Developed an internal communication tool with Node, Express and the Handlebars templating engine",
                 "Features include Google + Azure Active Directory based authentication and live-chat based discussion forums built with Socket.io",
@@ -54,30 +55,32 @@
                 "Gave live recorded talks to company employees on the capabilities of Node and improved existing software demonstrating said capabilties"
             ],
             "github-link": "",
-            "image": "yorkregion.png",
+            "image": "yorkregion.jpg",
             "tools": ["NodeJS", "Express", "Salesforce", "MongoDB", "Socket.io", "Handlebars"],
             "date": "April - August 2018"
         },
         {
-            "title": "Waterloop - Web Team Member",
+            "title": "Web Team Member",
+            "employer": "Waterloop",
             "description": [
                 "Created a single sign on application to manage member's access to common resources (slack, github, drive etc)",
                 "Developed user authentication and management tools to protect data and streamline regular personnel changes",
                 "Used Twitter API to display relevant media on Vue based team site"
             ],
             "github-link": "",
-            "image": "waterloop.svg",
+            "image": "waterloop.png",
             "tools": ["React", "NodeJS", "Express", "Bootstrap", "Styled-Components", "Webpack"],
             "date": "Sept 2018 - Present"
         },
         {
-            "title": "WATonomous - UI Dashboard Team Member",
+            "title": "UI Dashboard Team Member",
+            "employer": "WATonomous",
             "description": [
                 "Implemented a logging interface for an autonomous car using C++ and Qt Components",
                 "Radically reduced debugging time by displaying information from numerous car systems in real time"   
             ],
             "github-link": "",
-            "image": "watonomous.png",
+            "image": "watonomous.jpg",
             "tools": ["C++", "Qt Components"],
             "date": "Sept 2018 - Present"
         }

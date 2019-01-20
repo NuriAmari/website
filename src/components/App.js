@@ -2,9 +2,16 @@ import React, { Component } from 'react';
 import MenuToggle from './MenuToggle';
 import Content from './Content';
 import Sidebar from './Sidebar';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import '../App.css';
 import Terminal from './Terminal';
+import WasteLookup from './pages/SpotifyChallenge/App';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faStar);
+library.add(faSearch);
 
 class App extends Component {
     constructor(props) {
@@ -15,7 +22,6 @@ class App extends Component {
         };
         this.terminalRef = React.createRef();
         this.toggleMenu = this.toggleMenu.bind(this);
-        this.toggleCli = this.toggleCli.bind(this);
     }
 
     toggleMenu() {
@@ -24,43 +30,40 @@ class App extends Component {
         }));
     }
 
-    toggleCli() {
-        this.setState(previousState => ({
-            cliOpen: !previousState.cliOpen,
-        }));
-        if (this.state.cliOpen) {
-            console.log(this.terminalRef);
-            //this.terminalRef.current.focus();
-        } else {
-            window.focus();
-        }
-    }
-
     render() {
         let menuClass = this.state.menuOpen ? 'MenuOpen' : 'MenuClosed';
         let cliClass = this.state.cliOpen ? 'CLIOpen' : 'CLIClosed';
 
         return (
             <Router>
-                <div onKeyPress={this.test} style={{ overflow: 'hidden' }}>
-                    <div className={`App ${menuClass}`}>
-                        <Sidebar toggleMenu={this.toggleMenu} />
-                        <Content passedClass={`${cliClass}`} />
-                        <MenuToggle
-                            passedClass={menuClass}
-                            onClick={this.toggleMenu}
-                        />
-                        <Terminal
-                            passedClass={cliClass}
-                            toggleCli={this.toggleCli}
-                            toggleMenu={this.toggleMenu}
-                        />
-                        <div
-                            onClick={this.toggleCli}
-                            className={`cliTab ${cliClass}`}
-                        />
-                    </div>
-                </div>
+                <Switch>
+                    <Route
+                        exact
+                        path="/ShopifyChallenge"
+                        component={WasteLookup}
+                    />
+                    <Route>
+                        <div style={{ overflow: 'hidden' }}>
+                            <div className={`App ${menuClass}`}>
+                                <Sidebar toggleMenu={this.toggleMenu} />
+                                <Content passedClass={`${cliClass}`} />
+                                <MenuToggle
+                                    passedClass={menuClass}
+                                    onClick={this.toggleMenu}
+                                />
+                                <Terminal
+                                    menuOpen={this.state.menuOpen}
+                                    toggleCli={this.toggleCli}
+                                    toggleMenu={this.toggleMenu}
+                                />
+                                <div
+                                    onClick={this.toggleCli}
+                                    className={`cliTab ${cliClass}`}
+                                />
+                            </div>
+                        </div>
+                    </Route>
+                </Switch>
             </Router>
         );
     }

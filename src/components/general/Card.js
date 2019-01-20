@@ -63,6 +63,22 @@ const Wrapper = styled.div`
             font-family: 'Nunito', sans-serif;
         }
     }
+
+    #body-header {
+        display: flex
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        h2 {
+            margin-bottom: 0;
+        }
+
+        h4 {
+            color: #757D75;
+        }
+    }
 `;
 
 const Card = ({
@@ -79,7 +95,10 @@ const Card = ({
             <h1>{employer}</h1>
         </div>
         <div id="body">
-            <h2>{title}</h2>
+            <div id="body-header">
+                <h2>{title}</h2>
+                <h4>{date}</h4>
+            </div>
             <ul className="description">
                 {description.map((point, index) => (
                     <li key={index}>{point}</li>

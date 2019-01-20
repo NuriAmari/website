@@ -288,12 +288,9 @@ $dark-blue: #013243;
             }
 
             ul li {
-                //list-style-type: circle;
                 margin-bottom: 10px;
                 font-weight: normal;
             }
-            
-            padding-bottom: 30px;
 
             @media screen and (max-width: 768px) {
                 padding-bottom: 1.5vw;

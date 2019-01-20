@@ -81,7 +81,7 @@ const Wrapper = styled.div`
     }
 `;
 
-const Card = ({
+const EmploymentCard = ({
     title,
     employer,
     image,
@@ -113,4 +113,4 @@ const Card = ({
     </Wrapper>
 );
 
-export default Card;
+export default EmploymentCard;

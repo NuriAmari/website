@@ -1,17 +1,24 @@
 {
     "projects": [
         {
+            "title": "WatHub",
+            "image": "wathub.png",
+            "githublink": "https://github.com/NuriAmari/Waterloop-Team-Manager"
+        },
+        {
             "title": "JavaScript Chess AI",
+            "image": "chessboard.png",
             "description": [
                 "Determines next move by evaluating possible scenarios a variable number of moves into the future",
                 "Uses a minimax tree with alpha-beta pruning and a hash-map based board state representation"
             ],
             "tools": ["JavaScript", "Chess.js (move validation", "Chessboard.js (graphics)"],
-            "github-link": "",
+            "githublink": "https://github.com/NuriAmari/chess-ai",
             "date": ""
         },
         {
             "title": "Personal Website",
+            "image": "me.jpg",
             "description": [
                 "Created a terminal emulator allowing the user to navigate the entire site through text commands (pls try it if you havent)",
                 "Produced interactive SVG graphics, CSS animations and a responsive design",
@@ -19,28 +26,35 @@
                 "Implemented using React, SASS, Adobe Illustrator and Sketch"
             ],
             "tools": ["React", "SASS", "Adobe Illustrator", "JSON", "Sketch"],
-            "github-link": "",
+            "githublink": "https://github.com/NuriAmari/react-personal-website",
             "date": ""
         },
         {
+            "title": "Incident Manager",
+            "image": "incident.jpg",
+            "githublink": "https://github.com/NuriAmari/MajorIncidentManagement"
+        },
+        {
             "title": "C++ Multiplayer Tetris",
+            "image": "tetris.jpg",
             "description": [
                 "Worked in a group of 3 to create a game allowing two players to play tetris against one another using text commands",
                 "Developed text-command autocompletion with a trie, and flexible block rotation using linear algebra",
                 "Implemented object behaviour modification at runtime using a doubly-linked list based implementation of the decorator pattern"
             ],
             "tools": ["C++", "X-Window Graphics"],
-            "github-link": "",
+            "githublink": "https://github.com/NuriAmari/Multiplayer-Tetris-Public",
             "date": ""
         }, 
         {
             "title": "Spotify Music Curation",
+            "image": "spotify.jpg",
             "description": [
                 "Aims to helps groups quickly find music enjoyed by all members",
                 "Creates new Spotify playlists based on music contributed by members"
             ],
             "tools": ["Node", "React", "Redux", "MongoDB"],
-            "github-link": "",
+            "githublink": "https://github.com/NuriAmari/spotify-playlist",
             "date": ""
         }
     ],

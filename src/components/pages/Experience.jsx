@@ -1,6 +1,6 @@
 import React from 'react';
 import * as data from '../../data/data.json';
-import Card from '../general/Card.js';
+import EmploymentCard from '../general/EmploymentCard.js';
 
 const Experience = () => (
     <div className="Experience">
@@ -8,7 +8,7 @@ const Experience = () => (
             <h1>Experience</h1>
         </div>
         {data.experiences.map((experience, index) => (
-            <Card key={index} {...experience} />
+            <EmploymentCard key={index} {...experience} />
         ))}
     </div>
 );

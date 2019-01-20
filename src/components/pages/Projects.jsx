@@ -1,196 +1,54 @@
 import React from 'react';
+import * as data from '../../data/data.json';
+import ProjectCard from '../general/ProjectCard.js';
+import styled from 'styled-components';
+
+const ProjectsGrid = styled.div`
+    display: grid;
+    margin: 0 0 50px 50px;
+    width: calc(100% - 100px);
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 1fr;
+    grid-gap: 50px;
+
+    ::before {
+        content: '';
+        width: 0;
+        padding-bottom: 100%;
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    > *:first-child {
+        grid-row: 1 / 1;
+        grid-column: 1 / 1;
+    }
+
+    @media screen and (max-width: 1000px) {
+        grid-template-columns: 1fr;
+    }
+
+    @media screen and (max-width: 768px) {
+        margin-left: 5vw;
+        width: 90vw;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 550px) {
+        grid-template-columns: 1fr;
+    }
+`;
 
 const Projects = () => (
     <div className="Projects">
         <div className="header">
             <h1>Projects</h1>
         </div>
-        <div className="projects-list">
-            <div className="card">
-                <h2>
-                    Spotify GroupMusic{' '}
-                    <a
-                        href="https://github.com/NuriAmari/spotify-playlist"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-                <p>
-                    A small application made for HackTheNorth 2018. My partner
-                    and I wanted to make an application that would help friends
-                    curate their music. The application lets users log in with
-                    their Spotify account and create shared playlists. They can
-                    then contribute music to this playlist, and our application
-                    will filter contributions to include only common songs. Once
-                    everyone has added their music, GroupMusic automatically
-                    creates a matching playlist in the user's Spotify library.
-                </p>
-                <ul>
-                    <li>React</li>
-                    <li>Redux</li>
-                    <li>NodeJS</li>
-                    <li>Axios</li>
-                    <li>Spotify API</li>
-                </ul>
-            </div>
-            <div className="card">
-                <h2>
-                    Personal Website{' '}
-                    <a
-                        href="https://github.com/NuriAmari/react-personal-website"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-
-                <p>
-                    The 3rd iteration of my personal website. It serves to
-                    display my projects, and give me an outlet to show off some
-                    front-end skills. Built using React and modern CSS tools
-                    like flexbox, grid and animation. My personal favourite
-                    part, the custom CLI allows users to control the site
-                    through a command line.
-                </p>
-                <ul>
-                    <li>React</li>
-                    <li>React Router</li>
-                    <li>Sass</li>
-                    <li>CSS Animation</li>
-                    <li />
-                </ul>
-            </div>
-            <div className="card">
-                <h2>
-                    Incident Management{' '}
-                    <a
-                        href="https://github.com/NuriAmari/MajorIncidentManagement"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-                <p>
-                    During my time working at York Region, I became a little
-                    frustrated with some of the tools I had to use. In my free
-                    time, I rebuilt a work project, but this time with modern
-                    tools I liked better. I eventually presented the project to
-                    my supervisor and was able to continue working with the
-                    stack for the remainder of my time there. The Region is now
-                    investigating using the stack full time and a presentation I
-                    prepared has been recorded and circulated throughout the
-                    region. The web app I created is an incident management tool
-                    that focuses on real time and responsive behaviour.
-                </p>
-                <ul>
-                    <li>NodeJS</li>
-                    <li>Express</li>
-                    <li>MongoDB</li>
-                    <li>Mongoose</li>
-                    <li>Handlebars</li>
-                    <li>PassportJS</li>
-                    <li>Bootstrap</li>
-                </ul>
-            </div>
-            <div className="card">
-                <h2>
-                    BMO myApp{' '}
-                    <a
-                        href="https://github.com/NuriAmari/BMOApp"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-                <p>
-                    For a high school business competition, my partner and I
-                    created a proof of concept mobile banking Android
-                    application capable of reading and writing data to NFC data
-                    chips. As part of a marketing campaign, we designed and
-                    produced physical NFC enabled posters allowing customers to
-                    interact with our advertisements.
-                </p>
-                <ul>
-                    <li>Java</li>
-                    <li>Android Studio</li>
-                    <li>NFC API</li>
-                    <li>Adobe Animate</li>
-                    <li>Adobe Photoshop</li>
-                </ul>
-            </div>
-            <div className="card">
-                <h2>
-                    Flat Colours{' '}
-                    <a
-                        href="https://github.com/NuriAmari/Flat-Colours"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-                <p>
-                    A website to help designers browse and select colours. Once
-                    a user has found a colour they're satisfied with, they can
-                    click on it and the corresponding hexcode will automatically
-                    be copied to their clipboard.
-                </p>
-                <ul>
-                    <li>clipboard.js</li>
-                    <li>jQuery</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                </ul>
-            </div>
-            <div className="card">
-                <h2>
-                    Nodejs Snake{' '}
-                    <a
-                        href="https://github.com/NuriAmari/Snake.io"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-                <p>
-                    An online multiplayer version of the classic snake game.
-                    Includes live leaderboard and login features.
-                </p>
-                <ul>
-                    <li>Socket.io</li>
-                    <li>NodeJS</li>
-                    <li>JavaScript</li>
-                    <li>Adobe Animate</li>
-                </ul>
-            </div>
-            <div className="card">
-                <h2>
-                    RPG Adventure{' '}
-                    <a
-                        href="https://github.com/NuriAmari/Little-RPG-Adventure"
-                        rel="noopener noreferrer"
-                        target="_blank"
-                    >
-                        <img src={require('../../img/github.svg')} alt="" />
-                    </a>
-                </h2>
-                <p>
-                    A small RPG game including multiple worlds for players to
-                    explore, autonomous enemies to battle and stats to collect.
-                    Played by over 1500 unique players.
-                </p>
-                <ul>
-                    <li>ActionScript</li>
-                    <li>Adobe Animate</li>
-                </ul>
-            </div>
-        </div>
+        <ProjectsGrid>
+            {data.projects.map((project, index) => (
+                <ProjectCard key={index} {...project} />
+            ))}
+        </ProjectsGrid>
     </div>
 );
 

@@ -104,11 +104,6 @@ const EmploymentCard = ({
                     <li key={index}>{point}</li>
                 ))}
             </ul>
-            <ul className="tools">
-                {tools.map((tool, index) => (
-                    <li key={index}>{tool}</li>
-                ))}
-            </ul>
         </div>
     </Wrapper>
 );

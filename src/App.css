@@ -125,7 +125,8 @@
 .App .Content.CLIClosed {
   width: calc(100vw - 130px);
 }
-.App .Content .card p, .App .Content .card ul {
+.App .Content .card p,
+.App .Content .card ul {
   padding-left: 15px;
   border-left: 3px solid #fdad8c;
   font-family: "Karla", "Arial", sans-serif;
@@ -210,7 +211,8 @@
   margin-left: 10px;
   cursor: pointer;
 }
-.App .Content .Projects h2, .App .Content .Projects img {
+.App .Content .Projects h2,
+.App .Content .Projects img {
   vertical-align: bottom;
 }
 @media screen and (max-width: 768px) {
@@ -225,6 +227,26 @@
   .App .Content .About {
     padding-bottom: 1.5vw;
   }
+}
+.App .Content .About .about-content {
+  margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.App .Content .About img {
+  border-radius: 50%;
+  margin-bottom: 30px;
+  max-width: calc(100% - 100px);
+}
+.App .Content .About ul {
+  margin-top: 20px;
+  font-family: "Karla", "Arial", sans-serif;
+  list-style: initial;
+  margin-left: 15px;
+}
+.App .Content .About ul a {
+  color: #058fd7;
 }
 .App .Content .Experience p {
   font-weight: bold;
@@ -252,19 +274,6 @@
     margin-left: 5vw;
     width: 90vw;
   }
-}
-.App .Content .blurb {
-  margin-left: 50px;
-}
-@media screen and (max-width: 768px) {
-  .App .Content .blurb {
-    margin-left: 5vw;
-  }
-}
-.App .Content p.blurb {
-  width: calc(100% - 100px);
-  max-width: 800px;
-  margin-bottom: 35px;
 }
 .App .MenuToggle {
   position: fixed;

@@ -1,6 +1,21 @@
 {
     "projects": [
         {
+            "title": "Langtools",
+            "image": "langtools.jpg",
+            "githublink": "https://github.com/NuriAmari/Language-Tools"
+        },
+        {
+            "title": "Simplejson",
+            "image": "simplejson.jpg",
+            "githublink": "https://github.com/NuriAmari/simplejson"
+        },
+        {
+            "title": "Lara",
+            "image": "lara.png",
+            "githublink": "https://github.com/NuriAmari/Lara"
+        },
+        {
             "title": "WatHub",
             "image": "wathub.png",
             "githublink": "https://github.com/NuriAmari/Waterloop-Team-Manager"
@@ -45,7 +60,7 @@
             "tools": ["C++", "X-Window Graphics"],
             "githublink": "https://github.com/NuriAmari/Multiplayer-Tetris-Public",
             "date": ""
-        }, 
+        },
         {
             "title": "Spotify Music Curation",
             "image": "spotify.jpg",
@@ -59,6 +74,33 @@
         }
     ],
     "experiences": [
+        {
+            "title": "Software Engineering Intern",
+            "employer": "A Thinking Ape",
+            "description": [
+                "Created a uWSGI worker performance profiling tool allowing engineers to easily collect flamegraphs and other performance metrics from remote servers",
+                "Implemented a thread safe Redis wrapper and Django middleware to log per request Redis metrics",
+                "Identified and resolved performance bottlenecks through analysis of collected metrics, reducing latency of numerous outward facing APIs by over 50%",
+                "Configured Python daemon and TCP server to safely manage processes facilitating safe remote execution of arbitrary programs"
+            ],
+            "github-link": "",
+            "image": "ata.jpg",
+            "tools": ["NodeJS", "Express", "Salesforce", "MongoDB", "Socket.io", "Handlebars"],
+            "date": "January - April 2020"
+        },
+        {
+            "title": "Software",
+            "employer": "Splunk Inc",
+            "description": [
+                "Created a patent pending JSON viewer capable of smoothly rendering, searching and manipulating JSON files 10x larger than competitors",
+                "Using virtualization, web workers, memoization and careful use of the event loop, achieved performance simply not offered by currently available browser based alternatives",
+                "Produced animated, reusable and interactive data visualization components with SVG, d3.js and React"
+            ],
+            "github-link": "",
+            "image": "splunk.jpg",
+            "tools": ["NodeJS", "Express", "Salesforce", "MongoDB", "Socket.io", "Handlebars"],
+            "date": "May - August 2019"
+        },
         {
             "title": "Software Developer",
             "employer": "York Region",
@@ -91,7 +133,7 @@
             "employer": "WATonomous",
             "description": [
                 "Implemented a logging interface for an autonomous car using C++ and Qt Components",
-                "Radically reduced debugging time by displaying information from numerous car systems in real time"   
+                "Radically reduced debugging time by displaying information from numerous car systems in real time"
             ],
             "github-link": "",
             "image": "watonomous.jpg",

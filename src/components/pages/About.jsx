@@ -5,62 +5,20 @@ const About = () =>
         <div className="header">
             <h1>Nuri Amari</h1>
         </div>
-        <p className="blurb">
-            Hello, my name is Nuri. I'm a <span>Computer Science</span> student in my second year at the 
-            University of Waterloo. I like making web apps that work but also hopefully look half decent.
-            I'm looking for an internship summer 2019, so if you're hiring ...
-        </p>
-        <h2 className="blurb">Skills</h2>
-        <div className="skills">
-            <div className="card">
-                <h2>Front-End:</h2>
-                <div>
-                    <p>Front end is the area I'm most experienced in, and what I'm best at. I've
-                        spent far too long loathing CSS, but I think I've finally mastered it
-                        and we're cool now. Here are some tools I used in some capacity at some time
-                        in my entire life.
-                    </p>
-                    <ul>
-                        <li>React</li>
-                        <li>Handlebars</li>
-                        <li>Bootstrap</li>
-                        <li>Sass</li>
-                        <li>HTML, CSS, JavaSc-- blah, blah, blah</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="card">
-                <h2>Back-End:</h2>
-                <div>
-                    <p>The area I'm currently most interested in. Making the front end is all fun and games,
-                        but I'd like to make more applications that are actually useful. I'm interested in getting
-                        into full stack and data science, particularly in the finance world. Also I learned some things:
-                    </p>
-                    <ul>
-                        <li>Node</li>
-                        <li>MongoDB</li>
-                        <li>Express</li>
-                        <li>Mongoose</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-            </div>
-            <div className="card">
-                <h2>Design</h2>
-                <div>
-                    <p>Honestly, I never intended to learn design, it's more of a means to an end. Also I shamelessly,
-                        steal designs from actual designers. But, my application being good looking really excites
-                        me, and I've been told I have an eye for this kind of thing. Tools again:
-                    </p>
-                    <ul>
-                        <li>Sketch</li>
-                        <li>Illustrator</li>
-                        <li>Photoshop</li>
-                        <li>SVG</li>
-                        <li>Adobe Animate!</li>
-                    </ul>
-                </div>
-            </div>
+        <div className="about-content">
+          <img src={require("../../img/profile_pic.jpg")}/>
+          <p className="blurb">
+              Hi, I'm Nuri, ^ thats me. <br/><br/> I like programming languages, all things vim and learning about fundamental computer science systems.
+              I am a third year computer science student at the University of Waterloo hoping focus on compiler development. In my most recent professional experience, I focused on developing backend performance monitoring tools and combating scaling issues.
+              In my free time, I am slowly working on my own interpreter. Here are some programming related things I'm moderatley proud of:
+          </p>
+          <ul>
+            <li>My <a href="https://github.com/NuriAmari/Language-Tools">language tools</a>, associated <a href="https://github.com/NuriAmari/simplejson">JSON decoder</a> and <a href="https://github.com/NuriAmari/Lara">programming language</a> are coming along slowly but surely</li>
+            <li>I've spent too much time tuning my <a href="https://github.com/NuriAmari">dotfiles</a>, but have learned a great deal in the process</li>
+            <li>There is a patent with my name on it waiting for review at the US patent office for my work <a href="https://www.splunk.com/">@Splunk</a></li>
+            <li>I found and fixed <a href="https://github.com/benfred/py-spy/pull/234">a small bug</a> in an open source python peformance profiling tool</li>
+            <li>I think the terminal in this website is quite fun</li>
+          </ul>
         </div>
     </div>
 

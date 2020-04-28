@@ -54,10 +54,7 @@ const Navigation = props => {
             <div className="sidebar-connect">
                 <ul>
                     <li>Nuri Amari</li>
-                    <li>2B CS @ UWaterloo</li>
-                    <li>
-                        <a href="tel:6133051225">613 305 1225</a>
-                    </li>
+                    <li>3B CS @ UWaterloo</li>
                     <li>
                         <a href="mailto:nfamari@edu.uwaterloo.ca">
                             nfamari@edu.uwaterloo.ca

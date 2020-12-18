@@ -1,0 +1,34 @@
+{
+  "name": "website",
+  "version": "2.0.0",
+  "description": "Personal website for Nuri Amari",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "start": "webpack --watch",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NuriAmari/website.git"
+  },
+  "author": "Nuri Amari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NuriAmari/website/issues"
+  },
+  "homepage": "https://github.com/NuriAmari/website#readme",
+  "devDependencies": {
+    "sass": "^1.30.0",
+    "sass-loader": "^10.1.0",
+    "ts-loader": "^8.0.12",
+    "typescript": "^4.1.3",
+    "webpack": "^5.11.0",
+    "webpack-cli": "^4.2.0"
+  },
+  "dependencies": {
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  }
+}

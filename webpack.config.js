@@ -12,7 +12,7 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        use: ['style-loader','css-loader', 'sass-loader'],
+        use: ['style-loader','css-loader', 'resolve-url-loader','sass-loader'],
         exclude: '/node_modules/',
       },
     ],
@@ -23,5 +23,10 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-  }
+  },
+  devtool: 'inline-source-map',
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    port: 8000,
+  },
 };

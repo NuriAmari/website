@@ -1,0 +1,16 @@
+@import 'colors.scss';
+
+.frame {
+    background-color: $gray;
+    margin: 50px;
+
+    @media all and (orientation: landscape) {
+        height: calc(100vh - 100px);
+        width: calc(100vh - 100px);
+    }
+
+    @media all and (orientation: portrait) {
+        width: calc(100vw - 100px);
+        height: calc(100vw - 100px);
+    }
+}

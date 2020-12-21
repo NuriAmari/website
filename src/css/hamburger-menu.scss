@@ -1,0 +1,139 @@
+@import 'colors.scss';
+
+@keyframes topBar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-45deg) translateY(14px);
+    }
+}
+
+@keyframes bottomBar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(45deg) translateY(-14px);
+    }
+}
+
+@keyframes middleBar {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes hamburger-wrapper-translate {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-10px);
+    }
+}
+
+@keyframes hamburger-wrapper-translate-reverse {
+    from {
+        transform: translateX(-10px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+
+@keyframes topBarReverse {
+    from {
+        transform: rotate(-45deg) translateY(14px);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes bottomBarReverse {
+    from {
+        transform: rotate(45deg) translateY(-14px);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes middleBarReverse {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 88px;
+    left: 33px;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+
+    .line {
+        height: 5px;
+        width: 35px;
+        display: block;
+        background-color: $dark-gray;
+        margin-bottom: 5px;
+        animation-duration: 0.5s;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+        transform-origin: center;
+    }
+
+    &.open {
+        #bar1 {
+            animation-name: topBar;
+            animation-delay: 0.25s;
+        }
+
+        #bar2 {
+            animation-name: middleBar;
+        }
+
+        #bar3 {
+            animation-name: bottomBar;
+            animation-delay: 0.25s;
+        }
+
+        #hamburger-wrapper {
+            animation-name: hamburger-wrapper-translate;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0.25s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &.closed {
+        #bar1 {
+            animation-name: topBarReverse;
+        }
+
+        #bar2 {
+            animation-name: middleBarReverse;
+            animation-delay: 0.25s;
+            animation-fill-mode: backwards;
+        }
+
+        #bar3 {
+            animation-name: bottomBarReverse;
+        }
+        #hamburger-wrapper {
+            animation-name: hamburger-wrapper-translate-reverse;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-in-out;
+        }
+    }
+}

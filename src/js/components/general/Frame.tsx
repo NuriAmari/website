@@ -1,5 +1,12 @@
 import React from 'react';
+import '../../include/lettercrap.js';
 
-const Frame = () => <div className="frame"></div>;
+type FrameProps = {
+    children: React.ReactNode;
+};
+
+const Frame = (props: FrameProps) => (
+    <div className="frame">{props.children}</div>
+);
 
 export default Frame;

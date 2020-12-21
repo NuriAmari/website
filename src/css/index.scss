@@ -2,7 +2,50 @@
 @import 'terminal.scss';
 @import 'colors.scss';
 @import 'frame.scss';
+@import 'hamburger-menu.scss';
+@import 'lettercrap.scss';
+@import 'navigation.scss';
 
 #root {
     overflow: hidden;
+
+    #content {
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: row;
+        transition: left 0.5s cubic-bezier(0.45, 0.05, 0.55, 0.95) 0s;
+
+        &.closed {
+            @media all and (orientation: landscape) {
+                left: -100vh;
+            }
+
+            @media all and (orientation: portrait) {
+                left: -100vw;
+            }
+        }
+
+        > div {
+            margin: 50px;
+            display: flex;
+            align-items: stretch;
+            justify-content: stretch;
+
+            @media all and (orientation: landscape) {
+                height: calc(100vh - 100px);
+                width: calc(100vh - 100px);
+            }
+
+            @media all and (orientation: portrait) {
+                width: calc(100vw - 100px);
+                height: calc(100vw - 100px);
+            }
+
+            > div {
+                flex-grow: 1;
+            }
+        }
+    }
 }

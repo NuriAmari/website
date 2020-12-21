@@ -6,6 +6,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(png|jpg|svg|gif)$/,
+        use: 'file-loader',
+      },
+      {
         test: /\.(ts|tsx)$/,
         use: 'ts-loader',
         exclude: '/node_modules/',
@@ -26,6 +30,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   devServer: {
+    historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     port: 8000,
   },

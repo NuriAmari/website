@@ -28,7 +28,7 @@ class Terminal extends Component<TerminalProps, TerminalState> {
         super(props);
         this.state = {
             currLine: '',
-            terminalContent: ['Welcome'],
+            terminalContent: [],
             cursorPosition: 0,
         };
         this.commandHistory = new List<string>();
@@ -181,6 +181,11 @@ class Terminal extends Component<TerminalProps, TerminalState> {
                 onKeyPress={this.keyPressHandler}
                 tabIndex={-1}
             >
+                <p>
+                    Hi, my name is Nuri. Welcome to my website. Type help to
+                    start.
+                </p>
+                <br />
                 {this.state.terminalContent.map((line, index) => (
                     <p key={index}>{line}</p>
                 ))}

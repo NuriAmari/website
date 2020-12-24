@@ -4,11 +4,13 @@
     color: white;
     background-color: $dark-gray;
     &:focus {
-        outline: 4px solid $purple;
+        background-color: darken($dark-gray, 2%);
+        outline: 4px solid $gray;
     }
 
     font-size: 11pt;
     font-family: 'JetBrains Mono';
+    box-shadow: rgba(0, 0, 0, 0.7) 0px 1px 4px;
 
     position: fixed;
     right: 0;

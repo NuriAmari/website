@@ -75,14 +75,20 @@
 .hamburger-menu {
     position: fixed;
     top: 88px;
-    left: 33px;
+    left: 25px;
     width: 50px;
     height: 50px;
     z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    cursor: pointer;
 
     .line {
         height: 5px;
-        width: 35px;
+        width: 30px;
         display: block;
         background-color: $dark-gray;
         margin-bottom: 5px;

@@ -1,1 +1,1 @@
-export const NBSP = '\xa0';
+export const NBSP = String.fromCharCode(160);

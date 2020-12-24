@@ -289,7 +289,7 @@ const Home = () => {
     return (
         <div className="home">
             <div ref={logo} className="logo letter-animation"></div>
-            <div>
+            <div className="bio">
                 <strong>nuri amari:</strong> <a href="#">github</a>{' '}
                 <a href="#">resume</a> <a href="#">email</a>{' '}
                 <a href="#">linkedin</a>{' '}

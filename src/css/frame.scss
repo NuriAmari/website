@@ -1,6 +1,25 @@
 @import 'colors.scss';
 @import 'frames/home.scss';
+@import 'frames/about.scss';
+@import 'frames/play.scss';
 
 .frame {
-    background-color: $coral;
+    margin: 50px;
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+
+    @media all and (orientation: landscape) {
+        height: calc(100vh - 100px);
+        width: calc(100vh - 100px);
+    }
+
+    @media all and (orientation: portrait) {
+        width: calc(100vw - 100px);
+        height: calc(100vw - 100px);
+    }
+
+    > div {
+        flex-grow: 1;
+    }
 }

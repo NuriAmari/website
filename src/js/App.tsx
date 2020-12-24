@@ -1,26 +1,40 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import About from './components/frames/About';
 import commands from './components/terminal/commands';
 import Frame from './components/general/Frame';
 import HamburgerMenu from './components/HamburgerMenu';
 import Home from './components/frames/Home';
 import Navigation from './components/Navigation';
+import Play from './components/frames/Play';
 import Terminal from './components/terminal/Terminal';
+
+const ws = new WebSocket('ws://localhost/ws');
 
 const App = () => {
     const [menu, setMenu] = useState<boolean>(false);
 
-    const toggleMenu = (e: React.MouseEvent<HTMLDivElement>) => {
+    const toggleMenu = () => {
         setMenu(!menu);
     };
+
+    useEffect(() => {
+        ws.onopen = () => {
+            console.log('client connected');
+        };
+
+        ws.onmessage = (message) => {
+            console.log('client:', message);
+        };
+    }, []);
 
     return (
         <React.Fragment>
             <Router>
-                <HamburgerMenu onClick={toggleMenu} open={menu} />
+                <HamburgerMenu onClick={(e) => toggleMenu()} open={menu} />
                 <div id="content" className={menu ? '' : 'closed'}>
-                    <Navigation />
+                    <Navigation toggleNavigation={toggleMenu} />
                     <Frame>
                         <Switch>
                             <Route exact path="/play/format">
@@ -33,10 +47,10 @@ const App = () => {
                                 <p>Chess</p>
                             </Route>
                             <Route path="/play">
-                                <p>Play</p>
+                                <Play />
                             </Route>
                             <Route exact path="/about">
-                                <p>About</p>
+                                <About />
                             </Route>
                             <Route path="/">
                                 <Home />

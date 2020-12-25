@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { useHistory, Router, Route, Switch } from 'react-router-dom';
+
+import { HISTORY } from './lib/constants';
 
 import About from './components/frames/About';
 import commands from './components/terminal/commands';
@@ -14,6 +16,7 @@ const ws = new WebSocket('ws://localhost/ws');
 
 const App = () => {
     const [menu, setMenu] = useState<boolean>(false);
+    let history = useHistory();
 
     const toggleMenu = () => {
         setMenu(!menu);
@@ -29,9 +32,11 @@ const App = () => {
         };
     }, []);
 
+    const push = (path: string) => history.push(path);
+
     return (
         <React.Fragment>
-            <Router>
+            <Router history={HISTORY}>
                 <HamburgerMenu onClick={(e) => toggleMenu()} open={menu} />
                 <div id="content" className={menu ? '' : 'closed'}>
                     <Navigation toggleNavigation={toggleMenu} />
@@ -57,8 +62,8 @@ const App = () => {
                             </Route>
                         </Switch>
                     </Frame>
-                </div>
-                <Terminal {...commands} />
+                </div>{' '}
+                <Terminal commands={commands} />
             </Router>
         </React.Fragment>
     );

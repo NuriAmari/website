@@ -1,4 +1,5 @@
 import React, { useState, Component } from 'react';
+
 import List, { ListIterator } from '../../lib/List';
 import { NBSP } from '../../lib/constants';
 
@@ -13,8 +14,12 @@ export type CommandHandler = (
     state: TerminalState
 ) => TerminalState;
 
-export type TerminalProps = {
+export type CommandMap = {
     [commandName: string]: CommandHandler;
+};
+
+export type TerminalProps = {
+    commands: CommandMap;
 };
 
 class Terminal extends Component<TerminalProps, TerminalState> {
@@ -59,8 +64,8 @@ class Terminal extends Component<TerminalProps, TerminalState> {
                 };
 
                 const commandName = this.state.currLine.split(' ')[0];
-                if (commandName in this.props) {
-                    newState = this.props[commandName](
+                if (commandName in this.props.commands) {
+                    newState = this.props.commands[commandName](
                         this.state.currLine,
                         this.state
                     );
@@ -145,31 +150,26 @@ class Terminal extends Component<TerminalProps, TerminalState> {
     };
 
     render() {
+        const currLine = this.state.currLine.replace(/ /g, NBSP);
+
         let line = (
             <div>
-                <span>{Terminal.PROMPT + this.state.currLine}</span>
+                <span>{Terminal.PROMPT + currLine}</span>
                 <span id="cursor">{NBSP}</span>
             </div>
         );
 
-        if (this.state.cursorPosition < this.state.currLine.length) {
+        if (this.state.cursorPosition < currLine.length) {
             line = (
                 <div>
                     <span>
                         {Terminal.PROMPT +
-                            this.state.currLine.slice(
-                                0,
-                                this.state.cursorPosition
-                            )}
+                            currLine.slice(0, this.state.cursorPosition)}
                     </span>
                     <span id="cursor">
-                        {this.state.currLine.charAt(this.state.cursorPosition)}
+                        {currLine.charAt(this.state.cursorPosition)}
                     </span>
-                    <span>
-                        {this.state.currLine.slice(
-                            this.state.cursorPosition + 1
-                        )}
-                    </span>
+                    <span>{currLine.slice(this.state.cursorPosition + 1)}</span>
                 </div>
             );
         }

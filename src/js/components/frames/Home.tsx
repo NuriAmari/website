@@ -290,9 +290,22 @@ const Home = () => {
         <div className="home">
             <div ref={logo} className="logo letter-animation"></div>
             <div className="bio">
-                <strong>nuri amari:</strong> <a href="#">github</a>{' '}
-                <a href="#">resume</a> <a href="#">email</a>{' '}
-                <a href="#">linkedin</a>{' '}
+                <strong>nuri amari:</strong>{' '}
+                <a target="_blank" href="https://github.com/NuriAmari">
+                    github
+                </a>{' '}
+                <a target="_blank" href="/nuri_amari_resume.pdf">
+                    resume
+                </a>{' '}
+                <a target="_blank" href="mailto:nuri.amari99@gmail.com">
+                    email
+                </a>{' '}
+                <a
+                    target="_blank"
+                    href="https://www.linkedin.com/in/nuri-amari/"
+                >
+                    linkedin
+                </a>{' '}
             </div>
         </div>
     );

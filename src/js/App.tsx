@@ -4,15 +4,15 @@ import { useHistory, Router, Route, Switch } from 'react-router-dom';
 import { HISTORY } from './lib/constants';
 
 import About from './components/frames/About';
+import Auth from './components/general/Auth';
 import commands from './components/terminal/commands';
 import Frame from './components/general/Frame';
 import HamburgerMenu from './components/HamburgerMenu';
 import Home from './components/frames/Home';
 import Navigation from './components/Navigation';
 import Play from './components/frames/Play';
+import Chess from './components/frames/play/Chess';
 import Terminal from './components/terminal/Terminal';
-
-const ws = new WebSocket('ws://localhost/ws');
 
 const App = () => {
     const [menu, setMenu] = useState<boolean>(false);
@@ -21,16 +21,6 @@ const App = () => {
     const toggleMenu = () => {
         setMenu(!menu);
     };
-
-    useEffect(() => {
-        ws.onopen = () => {
-            console.log('client connected');
-        };
-
-        ws.onmessage = (message) => {
-            console.log('client:', message);
-        };
-    }, []);
 
     const push = (path: string) => history.push(path);
 
@@ -49,10 +39,11 @@ const App = () => {
                                 <p>Draw</p>
                             </Route>
                             <Route exact path="/play/chess">
-                                <p>Chess</p>
+                                <Chess color="w" />
                             </Route>
-                            <Route path="/play">
-                                <Play />
+                            <Route exact path="/play/chess/auth">
+                                <Auth />
+                                <Chess color="b" />
                             </Route>
                             <Route exact path="/about">
                                 <About />

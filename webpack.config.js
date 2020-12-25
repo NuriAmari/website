@@ -19,6 +19,12 @@ module.exports = {
         use: ['style-loader','css-loader', 'resolve-url-loader','sass-loader'],
         exclude: '/node_modules/',
       },
+      {
+        test: /chess.js/,
+        parser: {
+          amd: false,
+        },
+      },
     ],
   },
   resolve: {

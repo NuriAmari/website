@@ -1,5 +1,61 @@
 @import '../colors.scss';
+@import '../fonts.scss';
 
 .chess {
     background-color: $gray;
+    position: relative;
+
+    .overlay {
+        > div {
+            margin: 5%;
+            width: 90%;
+            height: 90%;
+            padding: 20px;
+            background-color: white;
+            font-family: $default-font;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            overflow-y: auto;
+            z-index: 6;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            p {
+                margin: 10px 0;
+            }
+
+            > div {
+                margin-top: 10px;
+                #header {
+                    background-color: $white;
+                    display: flex;
+                    flex-direction: row;
+                    > div {
+                        flex-grow: 1;
+                        text-align: center;
+                        padding: 8px 0 5px 0;
+                    }
+                }
+                #history {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+
+                    div {
+                        text-align: center;
+                        border-bottom: 1px solid $white;
+                        padding: 8px 0 5px 0;
+                        vertical-align: baseline;
+                    }
+                }
+            }
+        }
+
+        svg {
+            cursor: pointer;
+            z-index: 6;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
 }

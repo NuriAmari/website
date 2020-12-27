@@ -39,5 +39,8 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.join(__dirname, 'dist'),
     port: 9000,
+    proxy: {
+      '/api': 'http://localhost'
+    }
   },
 };

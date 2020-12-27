@@ -42,11 +42,13 @@ const App = () => {
                                 <Chess color="w" />
                             </Route>
                             <Route exact path="/play/chess/auth">
-                                <Auth />
                                 <Chess color="b" />
                             </Route>
                             <Route exact path="/about">
                                 <About />
+                            </Route>
+                            <Route exact path="/auth">
+                                <Auth />
                             </Route>
                             <Route path="/">
                                 <Home />

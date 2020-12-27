@@ -88,7 +88,7 @@ const ChessComponent = (props: ChessComponentProps) => {
     const toggleOverlay = () => setOverlay(!overlay);
 
     useEffect(() => {
-        const ws = new WebSocket('ws://localhost/ws');
+        const ws = new WebSocket(`wss://${window.location.hostname}/ws`);
         ws.onmessage = (message) => {
             const body = JSON.parse(message.data);
 

@@ -36,7 +36,7 @@ const Overlay = (props: OverlayComponentProps) => {
                     <h2>Chess</h2>
                     <p>
                         Welcome to my game of Chess. All visitors to this site
-                        can collectively play against me. When a vistor makes a
+                        can collectively play against me. When a visitor makes a
                         move, I will be notified and respond as soon as
                         possible. When one game ends, another will begin
                         automatically. If multiple visitors are playing, only

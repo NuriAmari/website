@@ -16,7 +16,7 @@ Included in my site is a bash-like shell allowing the user to control the site t
 
 ### ASCII-GIF
 
-The new site's homepage features an animation of a spinning globe created using the characters 0,1,_ and occasionally components of my name. The effect is created by breaking an gif into individual frames and converting the image into ASCII characters on the fly. To achieve this I have built upon, yet leaned heavily on the library [Lettercrap](https://github.com/nate-parrott/lettercrap) by Nate Parrott.
+The new site's homepage features an animation of a spinning globe created using the characters 0,1,_ and occasionally components of my name. The effect is created by breaking a gif into individual frames and converting the image into ASCII characters on the fly. To achieve this I have built upon, yet leaned heavily on the library [Lettercrap](https://github.com/nate-parrott/lettercrap) by Nate Parrott.
 
 [![globe.gif](https://i.postimg.cc/5NnVD6Xk/globe.gif)](https://postimg.cc/ZCB2dYFr)
 

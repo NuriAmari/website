@@ -25,9 +25,10 @@ const pages: Page[] = [
     { name: 'Home', link: '/', icon: faHome },
     { name: 'About', link: '/about', icon: faUserCircle },
     { name: 'Chess', link: '/play/chess', icon: faChessKnight },
-    { name: 'Draw', link: '/play/draw', icon: faPencilAlt },
-    { name: 'Format', link: '/play/format', icon: faCode },
 ];
+
+/* { name: 'Draw', link: '/play/draw', icon: faPencilAlt }, */
+/* { name: 'Format', link: '/play/format', icon: faCode }, */
 
 const Navigation = (props: NavigationProps) => {
     let history = useHistory();

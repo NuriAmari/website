@@ -1,0 +1,50 @@
+.format {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #2f3129;
+
+    .header {
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        > button {
+            margin-right: 12px;
+            padding: 5px;
+            cursor: pointer;
+        }
+    }
+
+    #ace-editor {
+        flex-grow: 1;
+        margin-left: 35px;
+    }
+
+    .error-marker {
+        position: absolute;
+        background-color: red;
+        z-index: 5;
+        border-radius: 0;
+    }
+
+    .overlay {
+        > div {
+            margin: 5%;
+            width: 90%;
+            height: 90%;
+            padding: 20px;
+            background-color: white;
+            font-family: $default-font;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+            overflow-y: auto;
+            z-index: 6;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

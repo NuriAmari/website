@@ -33,8 +33,7 @@ const About = () => {
                     >
                         simplejson
                     </a>{' '}
-                    a JSON formatter and linter embedded in this site{' '}
-                    <Link to="/play/format">here</Link>.
+                    a JSON formatter and linter.{' '}
                 </p>
                 <p>
                     In the last few years, I have completed 4-month internships
@@ -83,11 +82,6 @@ const About = () => {
                         Chess - Team up with the public in a game of Chess
                         against me
                     </li>
-                    <li>
-                        Draw - Leave me a drawing and browse through those left
-                        by others
-                    </li>
-                    <li>Format - Experiment with my JSON linter / formatter</li>
                 </ul>
                 <p>
                     If it interests you, you can read about these project's
@@ -104,5 +98,21 @@ const About = () => {
         </div>
     );
 };
+
+{
+    /* <li> */
+}
+{
+    /*     Draw - Leave me a drawing and browse through those left */
+}
+{
+    /*     by others */
+}
+{
+    /* </li> */
+}
+{
+    /* <li>Format - Experiment with my JSON linter / formatter</li> */
+}
 
 export default About;

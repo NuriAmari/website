@@ -12,6 +12,7 @@ import Home from './components/frames/Home';
 import Navigation from './components/Navigation';
 import Play from './components/frames/Play';
 import Chess from './components/frames/play/Chess';
+import Format from './components/frames/play/Format';
 import Terminal from './components/terminal/Terminal';
 
 const App = () => {
@@ -33,7 +34,7 @@ const App = () => {
                     <Frame>
                         <Switch>
                             <Route exact path="/play/format">
-                                <p>Format</p>
+                                <Format />
                             </Route>
                             <Route exact path="/play/draw">
                                 <p>Draw</p>

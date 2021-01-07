@@ -3,7 +3,14 @@ import { useHistory } from 'react-router-dom';
 import { CommandHandler, CommandMap, TerminalState } from './Terminal';
 import manPages from './manpages';
 
-import { NBSP, PAGES, HISTORY } from '../../lib/constants';
+import {
+    GITHUB_URL,
+    LINKEDIN_URL,
+    NBSP,
+    PAGES,
+    HISTORY,
+    RESUME_PATH,
+} from '../../lib/constants';
 
 const commands: CommandMap = {};
 
@@ -34,12 +41,16 @@ const help: CommandHandler = (
                 NBSP,
                 "Welcome to Nuri's bash-like CLI. Supported commands include:",
                 NBSP,
-                '   - clear',
                 '   - ls',
-                '   - pwd',
                 '   - cd',
+                '   - clear',
+                '   - resume',
+                '   - github',
+                '   - linkedin',
                 NBSP,
-                'Use help <command-name> for more info',
+                'Use help <command-name> for more info (ex: help cd)',
+                NBSP,
+                'Iterate through and edit command history with arrow keys',
             ],
         };
     } else if (segments.length === 2) {
@@ -83,7 +94,7 @@ const ls: CommandHandler = (
         terminalContent: [
             ...state.terminalContent,
             `$ ${command}`,
-            'Home About Chess Draw Format',
+            Object.keys(PAGES).reduce((acc, page) => acc + ' ' + page),
         ],
     };
 };
@@ -137,9 +148,49 @@ const cd: CommandHandler = (
     }
 };
 
+const resume: CommandHandler = (
+    command: string,
+    state: TerminalState
+): TerminalState => {
+    window.open(RESUME_PATH, '_blank');
+    return {
+        ...state,
+        terminalContent: [
+            ...state.terminalContent,
+            `$ ${command}`,
+            'Resume Last Updated: 01/07/2021',
+        ],
+    };
+};
+
+const github: CommandHandler = (
+    command: string,
+    state: TerminalState
+): TerminalState => {
+    window.open(GITHUB_URL, '_blank');
+    return {
+        ...state,
+        terminalContent: [...state.terminalContent, `$ ${command}`],
+    };
+};
+
+const linkedin: CommandHandler = (
+    command: string,
+    state: TerminalState
+): TerminalState => {
+    window.open(LINKEDIN_URL, '_blank');
+    return {
+        ...state,
+        terminalContent: [...state.terminalContent, `$ ${command}`],
+    };
+};
+
 commands['clear'] = clear;
 commands['help'] = help;
 commands['ls'] = ls;
 commands['cd'] = cd;
+commands['resume'] = resume;
+commands['github'] = github;
+commands['linkedin'] = linkedin;
 
 export default commands;

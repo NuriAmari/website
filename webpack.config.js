@@ -31,7 +31,7 @@ module.exports = {
     extensions: ['.tsx', '.ts', '.jsx', '.js'],
   },
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle-v1.0.0.js',
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',

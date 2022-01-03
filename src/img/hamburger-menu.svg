@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 262.58 156.65">
-<defs><style>.cls-1,.cls-2{fill:#313131;}.cls-2{font-size:60px;font-family:Helvetica-Bold, Helvetica;font-weight:700;}
-</style></defs><title>hamburger-menu</title>
-<g id="bar1"><rect class="cls-1" y="41.85" width="169" height="15"/></g>
-<g id="bar2"><rect class="cls-1" y="70.35" width="169" height="15"/></g>
-<g id="bar3"><rect class="cls-1" y="98.85" width="169" height="15"/></g>
-<g id="menu_text"><text class="cls-2" transform="translate(210.99 0) rotate(90)">Menu</text>
-</g></svg>
